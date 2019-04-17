@@ -24,7 +24,10 @@ int main(int argc, char* argv[])
         u32 kDown = hidKeysDown();
         if (kDown & KEY_Y) {
             FILE *f = fopen("gdbhio:test.txt", "w+");
-            if (f == NULL) perror("fopen");
+            if (f == NULL) {
+                perror("fopen");
+                continue;
+            }
             fprintf(f, "Hello world!");
             fclose(f);
 

@@ -55,3 +55,6 @@ dkms.conf
 .vscode/
 build/
 test.txt
+
+*.3dsx
+*.smdh
